@@ -1,6 +1,4 @@
 import React from 'react'
-import {FaGithub} from 'react-icons/fa'
-import {IoLogoTwitter} from 'react-icons/io'
 import {AiOutlineMenuFold,AiOutlineClose} from 'react-icons/ai'
 import { useState } from 'react'
 
@@ -28,10 +26,7 @@ import { useState } from 'react'
             {!nav?  <AiOutlineMenuFold className='fixed right-0 mr-5 ease-in-out duration-700'  size={30} /> :   <AiOutlineClose className='fixed right-0 mr-5 ease-in-out duration-700' size={30} />}
           </div>
 
-<div className='flex gap-4'>
-    <FaGithub />
-    <IoLogoTwitter />
-</div>
+
 
           <div className={nav? 'fixed top-0 bg-black px-4 left-0 w-[60%]  border-r h-full  border-r-gray-600 ease-out duration-700' :'fixed left-[-100%]   duration-1000' }>
           <h1 className=' text-3xl p-3 font-bold pt-3 text-[#3e873e] uppercase '> Hi-shade</h1>

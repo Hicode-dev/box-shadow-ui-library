@@ -1,8 +1,8 @@
 import React ,{useState} from 'react'
   import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
-  import {FaGithub} from 'react-icons/fa'
-import {IoLogoTwitter} from 'react-icons/io'
+//   import {FaGithub} from 'react-icons/fa'
+// import {IoLogoTwitter} from 'react-icons/io'
 import Navbar from './component/Navbar';
 const Box = () => {
     const [boxShadow, setBoxShadow] = useState('')
@@ -69,8 +69,8 @@ const Box = () => {
         </div>
         <div className='fixed top-[30rem] right-10' >
   <div className='gap-y-8'>
-  <FaGithub size={30} />
-    <IoLogoTwitter size={30} />
+  {/* <FaGithub size={30} />
+    <IoLogoTwitter size={30} /> */}
   </div>
 </div>
 

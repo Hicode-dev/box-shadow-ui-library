@@ -1,18 +1,24 @@
 import React ,{useState} from 'react'
+  import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+import Navbar from './component/Navbar';
 const Box = () => {
     const [boxShadow, setBoxShadow] = useState('')
 
-   const  handleClick =(shadow)=>{
+   const  handleClick =(shadow)=> {
         navigator.clipboard.writeText(boxShadow)
         setBoxShadow(shadow)
-``
+        toast.success(`${shadow} copied`)
     }
+    
   return (
     <div>
-      <div className="grid lg:grid-cols-5 grid-cols-2 sm:grid-cols-3 gap-8  mx-9 my-5 ">
-        <div className="boxes border p-10 cursor-pointer  " style={{ boxShadow:' rgba(149, 157, 165, 0.2) 0px 8px 24px'}} onClick={() => handleClick(' rgba(149, 157, 165, 0.2) 0px 8px 24px')}>
+ <Navbar>
+ <div className="grid lg:grid-cols-5 grid-cols-2 sm:grid-cols-3 gap-8  mx-9 my-5 ">
+        <div className="boxes border p-10 cursor-pointer  "  style={{ boxShadow:' rgba(149, 157, 165, 0.2) 0px 8px 24px'}} onClick={() => handleClick(' rgba(149, 157, 165, 0.2) 0px 8px 24px')}>
         box Shadow 1
         </div>
+
         <div className="boxes border p-10 cursor-pointer"  style={{boxShadow:'0 0 30px rgba(0, 0, 0, 0.5'}} onClick={() => handleClick('0 0 30px rgba(0, 0, 0, 0.5')}>
         box Shadow 2
         </div>
@@ -57,7 +63,10 @@ const Box = () => {
         <div className="boxes border p-10 cursor-pointer" style={{boxShadow:'rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px'}} onClick={() => handleClick('rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px')}>
         box Shadow 16
         </div>
-      </div>
+        <ToastContainer />
+
+      </div> 
+ </Navbar>
     </div>
   )
 }
